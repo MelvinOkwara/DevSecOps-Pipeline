@@ -14,7 +14,6 @@ spec:
     spec:
       containers:
       - name: my-app
-        # This is the line we updated with your information:
         image: 250585564599.dkr.ecr.eu-west-1.amazonaws.com/my-app-repo:latest
         ports:
         - containerPort: 80

@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main, main ]
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -37,7 +37,7 @@ jobs:
         with:
           image-ref: 'my-app-repo:latest'
           format: 'table'
-          exit-code: '0' # This fails the pipeline if "CRITICAL" bugs are found
+          exit-code: '1' # This fails the pipeline if "CRITICAL" bugs are found
           ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
 
